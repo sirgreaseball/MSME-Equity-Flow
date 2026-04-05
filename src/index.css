@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 4%;
+    --foreground: 0 0% 93%;
+
+    --card: 0 0% 7%;
+    --card-foreground: 0 0% 93%;
+
+    --popover: 0 0% 7%;
+    --popover-foreground: 0 0% 93%;
+
+    --primary: 0 0% 93%;
+    --primary-foreground: 0 0% 4%;
+
+    --secondary: 0 0% 11%;
+    --secondary-foreground: 0 0% 60%;
+
+    --muted: 0 0% 11%;
+    --muted-foreground: 0 0% 45%;
+
+    --accent: 0 0% 14%;
+    --accent-foreground: 0 0% 93%;
+
+    --destructive: 0 0% 40%;
+    --destructive-foreground: 0 0% 93%;
+
+    --border: 0 0% 14%;
+    --input: 0 0% 14%;
+    --ring: 0 0% 30%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 6%;
+    --sidebar-foreground: 0 0% 60%;
+    --sidebar-primary: 0 0% 93%;
+    --sidebar-primary-foreground: 0 0% 4%;
+    --sidebar-accent: 0 0% 11%;
+    --sidebar-accent-foreground: 0 0% 93%;
+    --sidebar-border: 0 0% 14%;
+    --sidebar-ring: 0 0% 30%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    @apply bg-background text-foreground;
+    background-color: #0a0a0a;
+    color: #ededed;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    backface-visibility: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Syne', system-ui, sans-serif;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: 'Syne', system-ui, sans-serif;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
